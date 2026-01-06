@@ -14,21 +14,21 @@ const convertValues = () => {
     currency: "BRL",
   }).format(inputReais);
 
-  if (select.value === "US$ Dólar Americano") {
+  if (select.value === "dolar") {
     currencyValueText.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
     }).format(inputReais / dolar);
   }
 
-  if (select.value === "€ Euro") {
+  if (select.value === "euro") {
     currencyValueText.innerHTML = new Intl.NumberFormat("de-DE", {
       style: "currency",
       currency: "EUR",
     }).format(inputReais / euro);
   }
 
-  if (select.value === "Bitcoin") {
+  if (select.value === "bitcoin") {
     currencyValueText.innerHTML = new Intl.NumberFormat("en-US", {
       minimumFractionDigits: 8,
     }).format(inputReais / bitcoin);
@@ -39,17 +39,17 @@ const changeCurrency = () => {
   const currencyName = document.getElementById("currency-name");
   const currencyImg = document.getElementById("currency-img");
 
-  if (select.value === "€ Euro") {
+  if (select.value === "euro") {
     currencyName.innerHTML = "Euro";
     currencyImg.src = "assets/euro.png";
   }
 
-  if (select.value === "US$ Dólar Americano") {
+  if (select.value === "dolar") {
     currencyName.innerHTML = "Dólar Americano";
     currencyImg.src = "assets/estados-unidos.png";
   }
 
-  if (select.value === "Bitcoin") {
+  if (select.value === "bitcoin") {
     currencyName.innerHTML = "Bitcoin";
     currencyImg.src = "assets/bitcoin.png";
   }
