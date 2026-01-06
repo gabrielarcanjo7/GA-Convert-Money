@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GA Convert Money</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>GA Convert Money</h1>
+      </header>
+
+      <main>
+        <label for="select00">
+          Converter <b>de</b>
+          <select name="select00">
+            <option>R$ Real Brasileiro</option>
+          </select>
+        </label>
+
+        <label for="select00">
+          Converter <b>para</b>
+          <select name="select00" id="currency-select">
+            <option>US$ Dólar Americano</option>
+            <option>€ Euro</option>
+            <option>Bitcoin</option>
+          </select>
+        </label>
+
+        <label for="input00">
+          Valor
+          <input id="input-real" placeholder="R$ 10.000.00" />
+        </label>
+
+        <button id="convert-button" type="button">Converter</button>
+
+        <section>
+          <div class="currency-container">
+            <img src="assets/brasil.png" alt="bandeira-do-Brasil" />
+            <p class="currency-name">Real</p>
+            <p class="currency-value" id="real-value-text">R$ 10.000,00</p>
+
+            <img
+              class="arrow-img"
+              src="assets/reducao-de-preco.png"
+              alt="seta-para-baixo"
+            />
+
+            <div class="currency-container"></div>
+            <img
+              src="assets/estados-unidos.png"
+              alt="bandeira-dos-EUA"
+              id="currency-img"
+            />
+            <p class="currency-name" id="currency-name">Dólar Americano</p>
+            <p class="currency-value" id="currency-value-text">US$ 2.000,00</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
